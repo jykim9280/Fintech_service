@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech_Service</title>
+</head>
+
+<body>
+    <h1> 안녕하세요 </h1>
+    <a href="https://www.naver.com/">네이버</a>
+    <!-- 부모 자식 관계 -->
+
+    <!-- h 태그
+    검색시 h1~h6 를 기준으로 찾음. 순서대로 써야 함.-->
+    <h1>h1 태그입니다.</h1>
+    <h2>h2 태그입니다.</h2>
+    <h3>h3 태그입니다.</h3>
+    <h4>h4 태그입니다.</h4>
+    <h5>h5 태그입니다.</h5>
+    <h6>h6 태그입니다.</h6>
+
+
+    <a href="https://www.naver.com/">네이버</a> 
+    <a href="https://www.naver.com/">네이버</a> 
+    <a href="https://www.naver.com/">네이버</a><br> 
+    <a href="https://www.naver.com/">네이버</a>
+    <!-- 인라인 태그 (줄바꿈 안됨) -->
+
+
+    <!-- p 태그 : 문단 태그로 본문 작성시 사용함.-->
+     <p> p태그 입니다. 문단을 작성할 때 사용합니다. </p><br>
+     <p> p태그2 입니다. 문단을 작성할 때 사용합니다. </p>
+    <!-- 블록태그인 p태그는 p로 끝나면 줄바꿈 됨 -->
+    <!-- 줄바꿈 <br/> 태그, 블록태그 마진은 기본으로 잡혀있음 -->
+
+    <!-- 삭제 표시 del -->
+     <p> 오늘만 대 할인 <del> 50000 </del> 30000 </p>
+    <!-- 첨자 태그 sub -->
+     <p>h<sup>2</sup></p>
+     <p>B<sup>2</sup></p>
+    <!--  div  -->
+
+    <div>
+        <p> p태그 입니다. 문단을 작성할 때 사용합니다. </p>
+        <p> p태그2 입니다.<br> 문단을 작성할 때 사용합니다. <br></p>
+    </div>
+
+    <div class = "movie">
+        <p> 영화 소개</p>
+        <p> 영화를 소개하는 페이지입니다.</p>
+    </div>
+    <div class = "tv">
+        <p> TV 프로그램 소개</p>
+        <p> TV 프로그램을 소개하는 페이지입니다.</p>
+    </div>
+
+    <!-- span -->
+     <p> 영화를 소개하는 <span style="color:red"> 페이지 </span> 입니다.</p>
+    
+    <!-- 목록 태그 (ol: ordered list), ul(unordered list), dl(description list) -->
+     <!-- ol, ul, dl 안쪽에 들어가는 세부 항목 li(list) -->
+    
+     <h1> 판매 중인 과일</h1>
+     <ol>
+        <li> 바나나</li>
+        <li> 사과</li>
+        <li> 수박</li>
+     </ol>
+     <h1> 판매 중인 과일</h1>
+     <ul>
+        <li> 바나나</li>
+        <li> 사과</li>
+        <li> 수박</li>
+     </ul>
+     <dl>
+        <dt> 판매 중인 과일</dt>
+        <dd> 바나나</ㅇ>
+        <dd> 사과</dd>
+        <dd> 수박</dd>
+     </dl>
+
+    <!-- 링크와 이미지 넣기 -->
+    <!-- 링크는 a 태그 href = "대상 경로" target = "링크 연결 방식" -->
+     <a href="#"> 주소를 모르는 링크</a><br>
+     <a href="https://www.naver.com" target="_blank"> 주소를 모르는 링크</a><br>
+     <a href="https://www.naver.com" target="_parent"> 주소를 모르는 링크 _parent</a><br>
+     <a href="https://www.naver.com" target="_self"> 주소를 모르는 링크 _self</a><br>
+     <a href="https://www.naver.com" > 네이버 바로가기 타겟 없음 - 현재 창에 표시</a><br>
+     <a href="https://www.naver.com" target="_blank" title = "네이버로 가는 링크"> 주소를 모르는 링크</a><br>
+
+     <!-- 이미지 넣기 -->
+      <img src="..\images.jfif" alt = "고양이 사진"><br>
+      <img src=".\img/images.jfif//" alt = "다른 폴더에 있을때~~"><br>
+      <img src="images.jfif//" alt = "사진이 없거나 사진에 대한 설명이 필요할 때 작성">
+
+      <a href="https://www.naver.com">
+        <img src="images.jfif" alt = "네이버로 가는 강쥐 사진"><br>
+      </a>
+
+      <!-- 텍스트 강조 태그 strong, em(empasis)) 검색 결과에도 반영됨 -->
+       <strong> 중요한 의미가 있는 텍스트 </strong>
+       <p> 이 시설은 <strong> 관계자 외 출입금지</strong>입니다.</p>
+       <br>
+       <em> 강조하고 싶은 텍스트 </em><br><br><br>
+      <!-- form 태그: 사용자로부터 데이터를 입력받아 서버로 전송할 때 사용 -->
+       <!-- form action = "서버 주소" method = "get/post"-->
+      <!-- input 태그: 사용자로부터 데이터를 입력받는 태그 -->
+       <!-- input type = "데이터 종류", name = "이름"=>변수명, value="초깃값",
+        placeholder ="기본적으로 표시되는 값" -->
+       <p> 텍스트: <input type="text" placeholder ="text"></p>
+       <p> 패스워드: <input type="password" placeholder ="비밀번호를 입력하세요"></p>
+       <p> tel: <input type="tel" placeholder ="000-0000-0000"></p>
+       <p> number: <input type="number" placeholder ="number"></p>
+       <p> url: <input type="url" placeholder ="url 입력하세요"></p>
+       <p> radio: <input type="radio"> <a> _ </a><input type="radio"></p>
+       <p> checkbox: <input type="checkbox"></p>
+       <p> submit: <input type="submit"></p>
+       <p> month: <input type="month"></p>
+       
+
+       <!-- textarea 텍스트를 여러 줄 입력해야 할 때 -->
+        <from action="#" method="post">
+            <fieldset>
+                <legend>블로그 글쓰기</legend>
+                <p>
+                    <label for="title"> 제목 
+                        <input type="text" id="title" name="title">
+                    </label>
+                </p>
+                <p>
+                    <label for="desc"> 내용
+                        <textarea name="desc" id="desc"></textarea>
+                    </label>
+                </p>
+            </fieldset>
+        </from>
+        <!--  select, option, optgroup -->
+            <!--<optgroup label="그룹 이름">
+                    <option value="서버에 전송할 값"> 웹브라우저에 표시할 값</option>
+                </optgroup>-->
+                
+
+        <select name="city" id="city">
+            <option value="강북구">강북구</option>
+            <option value="강남구">강남구</option>
+            <option value="구로구">구로구</option>
+        </select>
+        
+        <br>
+        <br>  
+
+            <select name="city" id="city">
+                <optgroup label="서울시">
+                    <option value="강남구">강남구</option>
+                    <option value="구로구">구로구</option>
+                </optgroup>
+                <optgroup label="경기도 성남시">
+                    <option value="중원구">중원구</option>
+                    <option value="분당구">분당구</option>
+                </optgroup>
+            </select>
+
+            <!-- 웹브라우저에서 보이는 갯수 지정 -->
+            <select name="city" id="city" size = "4">
+                <optgroup label="서울시">
+                    <option value="강남구">강남구</option>
+                    <option value="구로구">구로구</option>
+                </optgroup>
+                <optgroup label="경기도 성남시">
+                    <option value="중원구">중원구</option>
+                    <option value="분당구">분당구</option>
+                </optgroup>
+            </select>
+
+            <!-- 2개이상 선택 가능한 옵션 주기(웹상에서 ctrl 누르고 선택)-->
+            <select name="city" id="city" size = "4" multiple = "2">
+                <optgroup label="서울시">
+                    <option value="강남구">강남구</option>
+                    <option value="구로구">구로구</option>
+                </optgroup>
+                <optgroup label="경기도 성남시">
+                    <option value="중원구">중원구</option>
+                    <option value="분당구">분당구</option>
+                </optgroup>
+            </select>
+            
+            <!-- select에서 기본값 주기 : selected-->
+            <select name="city" id="city" size = "4" multiple = "2">
+                <optgroup label="서울시">
+                    <option value="강남구" selected>강남구</option>
+                    <option value="구로구" >구로구</option>
+                </optgroup>
+                <optgroup label="경기도 성남시">
+                    <option value="중원구">중원구</option>
+                    <option value="분당구">분당구</option>
+                </optgroup>
+            </select>
+
+
+        <!-- button 태그 -->
+        <button type = "submit"> 제출하기 </button> <!-- 인라인 태그라서 줄바꿈 안됨-->
+
+        <!-- maxlength="숫자" input태그에서 입력받는 길이 제한 -->
+         <p> 글자 입력 : <input type = "text" maxlength="4"></p>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+
+</body>
+
+</html>
