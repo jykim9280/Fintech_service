@@ -35,7 +35,7 @@ def stock_info_to_db(idx, code, df):
 # mysql에서 테이블 불러오기
 engine = create_engine(f"{os.getenv('db')}+{os.getenv('dbtype')}://{os.getenv('id')}:{os.getenv('pw')}@{os.getenv('host')}/{os.getenv('database')}")
 conn = engine.connect()
-data = pd.read_sql('2024_07_29_stock_company_info', con=conn)
+data = pd.read_sql('2024_07_29stock_company_info2', con=conn)
 conn.close()
 
     
