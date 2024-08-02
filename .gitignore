@@ -5,4 +5,6 @@ __pycache__
 build
 dist
 dbenv.py
+.env_db
+.env_db2
 .exe
