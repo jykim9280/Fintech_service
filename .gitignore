@@ -8,3 +8,4 @@ dbenv.py
 .env_db
 .env_db2
 .exe
+exchange_rate.exe
