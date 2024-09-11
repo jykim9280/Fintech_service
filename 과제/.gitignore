@@ -1,0 +1,11 @@
+.env
+.dbenv
+.ipynb_checkpoints
+__pycache__
+build
+dist
+dbenv.py
+.env_db
+.env_db2
+.exe
+exchange_rate.exe
