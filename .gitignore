@@ -10,3 +10,4 @@ dbenv.py
 .exe
 exchange_rate.exe
 06machine_learning/data/
+*.csv
