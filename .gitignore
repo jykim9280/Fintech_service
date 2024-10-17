@@ -11,3 +11,12 @@ dbenv.py
 exchange_rate.exe
 06machine_learning/data/
 *.csv
+*.json
+*.txt
+*.pkl
+autogluon-stock-prices/
+AutogluonModels/
+autogluon-m4-hourly/
+.ipynb_checkpoints/
+models/
+model/
