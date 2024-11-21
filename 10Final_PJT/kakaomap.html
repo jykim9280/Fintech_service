@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>뱅뱅막국수 정보</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=809f4e8d66fb1289847f037850859b15"></script>
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        #map {
+            width: 70%; /* 지도 영역 */
+            height: 100%;
+        }
+        #info-panel {
+            width: 30%; /* 정보 표시 패널 */
+            height: 100%;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+            overflow-y: auto;
+            font-family: Arial, sans-serif;
+        }
+        .info-content {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .info-content h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .info-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .info-content .details {
+            font-size: 14px;
+            color: #666;
+        }
+        .info-content .label {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info-panel">
+        <h3>마커 정보</h3>
+        <div id="info-content"></div>
+    </div>
+    <script>
+        // 1. 고정된 현위치 설정
+        var lat = 37.4896537373705; // 고정 위도
+        var lng = 127.032839070004; // 고정 경도
+        var userLocation = new kakao.maps.LatLng(lat, lng);
+
+        // 2. 지도 생성
+        var mapContainer = document.getElementById('map');
+        var mapOption = {
+            center: userLocation,
+            level: 4 // 확대 레벨
+        };
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 3. 현위치 마커 표시
+        var userMarker = new kakao.maps.Marker({
+            position: userLocation,
+            map: map
+        });
+
+        // 현위치 인포윈도우
+        var userInfoWindow = new kakao.maps.InfoWindow({
+            content: '<div style="padding:5px;">현위치</div>'
+        });
+        userInfoWindow.open(map, userMarker);
+
+        // 4. 뱅뱅막국수 데이터 마커 표시
+        var restaurantData = [
+            {
+                name: "뱅뱅막국수 역삼본점",
+                type: "국수",
+                rating: "4.4",
+                lat: 37.48965570000001,
+                lng: 127.0328555,
+                img: "https://via.placeholder.com/400", // 이미지 링크 예제
+                phone: "0507-1392-4848",
+                menu: "뱅뱅막국수, 들기름막국수, 육전",
+                address: "서울 강남구 도곡로 112 서한빌딩 1층 103호",
+                hours: "매일 11:00 ~ 21:00, 매일 휴게시간 15:00 ~ 16:30"
+            }
+        ];
+
+        // 마커 및 정보 표시
+        restaurantData.forEach(function(restaurant) {
+            var marker = new kakao.maps.Marker({
+                position: new kakao.maps.LatLng(restaurant.lat, restaurant.lng),
+                map: map
+            });
+
+            // 마커 클릭 이벤트
+            kakao.maps.event.addListener(marker, 'click', function() {
+                var infoPanel = document.getElementById('info-content');
+                infoPanel.innerHTML = `
+                    <div class="info-content">
+                        <h4>${restaurant.name}</h4>
+                        <img src="${restaurant.img}" alt="${restaurant.name}">
+                        <div class="details">
+                            <div class="type"><span class="label">업종:</span> ${restaurant.type}</div>
+                            <div class="rating"><span class="label">평점:</span> ⭐ ${restaurant.rating}</div>
+                            <div class="phone"><span class="label">전화번호:</span> ${restaurant.phone}</div>
+                            <div class="menu"><span class="label">대표 메뉴:</span> ${restaurant.menu}</div>
+                            <div class="address"><span class="label">주소:</span> ${restaurant.address}</div>
+                            <div class="hours"><span class="label">영업시간:</span> ${restaurant.hours}</div>
+                        </div>
+                    </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>
